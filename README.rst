@@ -28,27 +28,27 @@ How to use?
 
 In the views.py::
 		
-		from log.utils import set_error_to_log
+	from log.utils import set_error_to_log
 
-		def myview(request, pk):
+	def myview(request, pk):
 
-			try:
-				data = Model.object.get(id=pk)
-			except Model.DoesNotExist:
-				set_error_to_log(request, "The record in the model Model not exists")
+		try:
+			data = Model.object.get(id=pk)
+		except Model.DoesNotExist:
+			set_error_to_log(request, "The record in the model Model not exists")
 
-	When occurs on error, go the administrator and visualize the record in the model.
+When occurs on error, go the administrator and visualize the record in the model.
 
 2. For example, for get errors loaded on a date
 	
 In the views.py::
 
-		from log.utils import get_data_log
+	from log.utils import get_data_log
 
-		def myview(request, pk):
+	def myview(request, pk):
 
-			now = datetime.datetime.now()
-			data = get_data_log('date', now)
+		now = datetime.datetime.now()
+		data = get_data_log('date', now)
 
 In this example, i'm getting errors from field date with the value now.
 Other field can be username.
