@@ -31,9 +31,9 @@ In the views.py::
 	def myview(request, pk):
 
 		try:
-			data = Model.object.get(id=pk)
-		except Model.DoesNotExist:
-			set_error_to_log(request, "The record in the model Model not exists")
+			raise "Error auto generate"
+		except Exception, e:
+			set_error_to_log(request, str(e))
 
 When occurs on error, go the administrator and visualize the record in the model.
 
@@ -47,6 +47,9 @@ In the views.py::
 
 		now = datetime.datetime.now()
 		data = get_data_log('date', now)
+		content = data[0].content
 
-In this example, i'm getting errors from field date with the value now.
+		return HttpResponse(content)
+
+In this example, i'm getting errors from field date with the value now. Then getting the first value.
 Other field can be username.

@@ -8,8 +8,6 @@ class DjLogAdmin(models.Model):
 
 	date = models.DateField(null=False)
 	username = models.CharField(null=True, blank=True, max_length=50)
-	name = models.CharField(null=True, blank=True, max_length=50)
-	surname = models.CharField(null=True, blank=True, max_length=50)
 	content = models.TextField(null=False, blank=False)
 
 	def __unicode__(self):

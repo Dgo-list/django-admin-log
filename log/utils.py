@@ -11,21 +11,15 @@ def set_error_to_log(request, content):
 
 	try:
 		now = datetime.datetime.now()
+		username = request.user.username
 
-		if request.username:
+		log = DjLogAdmin(date=now, username=username,
+						content=content)
 
-			username = request.username
-			surname = request.surname
-			name = request.name
-
-			lg = DjLogAdmin(date=now, username=username,
-						surname=surname, name=name, content=content)
-		else:
-			lg = DjLogAdmin(date=now)
-
-		lg.save()
 	except Exception:
-		pass
+		log = DjLogAdmin(date=now, content=content)
+
+	log.save()
 
 '''
 	Return error based on a filter
