@@ -1,5 +1,3 @@
-django-log-admin/README.rst
-================
 Django Log Admin
 ================
 
