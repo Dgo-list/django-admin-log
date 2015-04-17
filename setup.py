@@ -18,7 +18,7 @@ setup(
     license='BSD License', 
     description='Application that logs errors generated in a web system into a model. The model is displayed in the administrator.',
     long_description=README,
-    url='https://github.com/mapeveri/django-seo-admin',
+    url='https://github.com/mapeveri/django-admin-log',
     author='Peveri Martin',
     author_email='martinpeveri@gmail.com',
     classifiers=[
