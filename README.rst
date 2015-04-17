@@ -3,7 +3,7 @@ django-log-admin/README.rst
 Django Log Admin
 ================
 
-Application that logs errors generated in a web system into a model. The model is displayed in the administrator
+Application that logs errors generated in a web system into a model. The model is displayed in the administrator.
 
 Installing
 ----------
@@ -24,9 +24,9 @@ Quick start
 How to use?
 -----------
 
-1. For example to record an error
+1. For example, to record an error
 
-	In the views.py::
+In the views.py::
 		
 		from log.utils import set_error_to_log
 
@@ -41,7 +41,7 @@ How to use?
 
 2. For example, for get errors loaded on a date
 	
-	In the views.py::
+In the views.py::
 
 		from log.utils import get_data_log
 
@@ -50,6 +50,5 @@ How to use?
 			now = datetime.datetime.now()
 			data = get_data_log('date', now)
 
-	In this example, i'm getting errors from field date with the value now.
-
-	Other field can be username.
+In this example, i'm getting errors from field date with the value now.
+Other field can be username.
