@@ -1,7 +1,7 @@
 Django Admin Log
 ================
 
-Application that logs errors generated in a web system into a model. The model is displayed in the administrator.
+Application that logs errors generated in you web system into a model of django. The model is displayed in the administrator.
 
 Installing
 ----------
@@ -11,7 +11,11 @@ pip install django-admin-log
 Quick start
 -----------
 
-1. Include the app 'log' to INSTALLED_APPS in the settings.py
+1. Include the app 'log' to INSTALLED_APPS in the settings.py::
+	
+	INSTALLED_APPS = (
+		'log',
+	)
 		
 2. Apply migration with migrate for registry the model of django-seo-admin::
 
