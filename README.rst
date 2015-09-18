@@ -6,17 +6,19 @@ Application that logs errors generated in you web system into a model of django.
 Installing
 ----------
 
-pip install django-admin-log
+Via pip::
+
+		pip install django-admin-log
 
 Quick start
 -----------
 
 1. Include the app 'log' to INSTALLED_APPS in the settings.py::
-	
+
 	INSTALLED_APPS = (
 		'log',
 	)
-		
+
 2. Apply migration with migrate for registry the model of django-seo-admin::
 
 	python manage.py migrate
@@ -29,7 +31,7 @@ How to use?
 1. For example, to record an error
 
 In the views.py::
-		
+
 	from log.utils import set_error_to_log
 
 	def myview(request, pk):
@@ -42,7 +44,7 @@ In the views.py::
 When occurs on error, go the administrator and visualize the record in the model.
 
 2. For example, for get errors loaded on a date
-	
+
 In the views.py::
 
 	from log.utils import get_data_log
